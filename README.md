@@ -44,8 +44,12 @@ conda env create --file environment.yml
 <br>
 :point_right: In project folder make `reads` folder and move to it your paired-end [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format) reads (suffix should be: `_1.fastq.gz` and `_2.fastq.gz`).
 
-:grey_exclamation: You can also add your own RDs positions, which are not present in the `db/RD.bed` table. 
-Columns are: **1.** Chromosome name; **2.** Start position of the RD; **3.** End position of the RD; **4.** Name of the RD :
+:grey_exclamation: You can also add your own RDs positions, which are not present in the `db/RD.bed` table.\
+Columns are:\
+**1.** Chromosome name;\
+**2.** Start position of the RD;\
+**3.** End position of the RD;\
+**4.** Name of the RD.
 
 |            |         |         |       |
 | ---------- | ------- | ------- | ----- |
@@ -123,9 +127,9 @@ Parameters that can be adjusted in `config.json`:
 Output in the `Results_MM-DD-YYYY_HHh-MMm-SSs` directory will contain four tables: `RD_table.tsv`, `RD_known.tsv`, `RD_known.xlsx` and `RD_known.bin.tsv`
 
 Example of the `RD_table.tsv`:
-Table containing all discovered putative RDs.
-**RD** - Known RDs that intersects with deletion breakpoints.
-**LOF** - loss of function genes annotated with [snpEff](https://pcingola.github.io/SnpEff/).
+Table containing all discovered putative RDs.\
+**RD** - Known RDs that intersects with deletion breakpoints;\
+**LOF** - loss of function genes annotated with [snpEff](https://pcingola.github.io/SnpEff/);\
 **LENGTH** - Estimated size of predicted deletion.
 Values in cells represent deletion length in the sample.
 | CHROM      | START  | END    | LENGTH | LOF             | RD  | TYPE | ERR015582 | ERR017778 | ERR017782 | ERR019852 |
@@ -146,7 +150,7 @@ Table containing proportion of coverage in particular RDs.
 | ERR019852 | 0           | 0           | 0             | 0.386364  |
 
 Example of the `RD_known.xlsx`:
-Same as the `RD_known.tsv`, but in a [XLSX](https://en.wikipedia.org/wiki/Microsoft_Excel) format with applied contiditional formatting.
+Same as the `RD_known.tsv`, but in a [XLSX](https://en.wikipedia.org/wiki/Microsoft_Excel) format with applied contiditional formatting.\
 Conditional formatting corresponds with threshold value in a `config.json` file.
 
 ![](img/RD_known.xlsx.png)
