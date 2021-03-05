@@ -70,6 +70,7 @@ Columns are: **1.** Chromosome name; **2.** Start position of the RD; **3.** End
 │   ├── H37Rv.fna.fai
 │   ├── H37Rv.fna.pac
 │   ├── H37Rv.fna.sa
+│   ├── IS6110.bed
 │   ├── RD.bed
 │   └── RD_df.bed
 ├── envs
