@@ -1,0 +1,23 @@
+name: RDscan
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+  - r
+dependencies:
+  - bcftools=1.11
+  - bedtools=2.29.2
+  - bwa
+  - covtobed=1.2.0
+  - gatk4=4.1.9.0
+  - mosdepth=0.3.1
+  - parallel=20201122
+  - pigz
+  - r-base=3.6.3
+  - r-openxlsx=4.1.0
+  - r-optparse=1.6.6
+  - r-tidyverse=1.3.0
+  - samtools=1.11
+  - snakemake
+  - snpeff=4.1l
+  - survivor=1.0.7
