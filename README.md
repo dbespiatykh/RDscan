@@ -111,7 +111,7 @@ Parameters that can be adjusted in `config.json`:
 	"maxSVLEN": 30000
 }
 ```
-  - `threads` - number of threads to use for BWA-MEM (8 by default);
+  - `threads` - number of threads to use for [BWA-MEM](https://github.com/lh3/bwa) (8 by default);
   - `threshold` - threshold value to use for coverage condition filtering (0.05 by default)
   - `DHFFC` - [Duphold](https://github.com/brentp/duphold) flank fold-change (0.1 by default);
   - `minSVLEN` - minimum deletion length in bp (200 by default);
