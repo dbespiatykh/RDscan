@@ -33,6 +33,7 @@ git clone https://github.com/dbespiatykh/RDscan.git
 ```
 Install all required dependencies:
 ```bash
+cd RDscan
 conda env create --file environment.yml
 ```
 
