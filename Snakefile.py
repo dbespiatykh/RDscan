@@ -79,7 +79,7 @@ rule compute_coverage:
     shell: """
         parallel bedtools genomecov -bga -ibam ::: {input.bam}\
          | awk '$4<'$(samtools depth  -aa {input.bam} |  awk '{{sum+=$3}} END {{print sum/4411532*0.1}}')''\
-            | bedtools merge -d 1500 | bedtools subtract -a stdin -b {input.mask} -A > {output.bed}
+            | bedtools merge -d 1500 | bedtools subtract -f 0.30 -a stdin -b {input.mask} -A > {output.bed}
   """
 
 ## Convert BED files to VCF
