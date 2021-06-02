@@ -10,6 +10,7 @@ dependencies:
   - bwa
   - covtobed=1.2.0
   - gatk4=4.1.9.0
+  - mamba
   - mosdepth=0.3.1
   - parallel=20201122
   - pigz
