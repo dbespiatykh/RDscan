@@ -65,7 +65,7 @@ Columns are:\
 
 ```bash
 📂RDscan/
-├── Snakefile.py
+├── Snakefile
 ├── config.json
 ├── db
 │   ├── H37Rv.fna
@@ -98,12 +98,12 @@ conda activate RDscan
 ```
 Run pipeline:
 ```bash
-snakemake -j {Number of cores} -s Snakefile.py --use-conda --configfile config.json
+snakemake -j {Number of cores} --use-conda --configfile config.json
 ```
 
 It is recommended to use dry run if you are running pipeline for the first time, to see if everything is in working order, for this you can use `-n` flag:
 ```bash
-snakemake -j {Number of cores} -s Snakefile.py --use-conda --configfile config.json -n
+snakemake -j {Number of cores} --use-conda --configfile config.json -n
 ```
 
 Parameters that can be adjusted in `config.json`:
