@@ -117,12 +117,13 @@ Parameters that can be adjusted in `config.json`:
 }
 ```
   - `threads` - number of threads to use for [BWA-MEM](https://github.com/lh3/bwa) (8 by default);
+
+> e.g. If you run `snakemake -j 16` and `threads` parameter in `config.json` is equals to `2` , then snakemake will execute up to `8` instances of the `BWA-MEM` in the mapping rule.
+
   - `threshold` - threshold value to use for coverage condition filtering (0.05 by default)
   - `DHFFC` - [Duphold](https://github.com/brentp/duphold) flank fold-change (0.1 by default);
   - `minSVLEN` - minimum deletion length in bp (200 by default);
   - `maxSVLEN` - maximum deletion length in bp (30,000 by default)
-
-> e.g. If you run `snakemake -j 16` and `threads` parameter in `config.json` is equals to `2` , then snakemake will execute up to `8` instances of the `BWA-MEM` in the mapping rule.
 
 ## Output
 Output in the `Results_MM-DD-YYYY_HHh-MMm-SSs` directory will contain four tables: `RD_table.tsv`, `RD_known.tsv`, `RD_known.xlsx` and `RD_known.bin.tsv`
