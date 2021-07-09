@@ -164,5 +164,7 @@ Conditional formatting corresponds with threshold value in a `config.json` file.
 | ERR017778 | 1           | 1           | 1             | 0         |
 | ERR017782 | 0           | 0           | 0             | 0         |
 | ERR019852 | 1           | 1           | 1             | 0         |
+
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+
+[MIT](LICENSE)
