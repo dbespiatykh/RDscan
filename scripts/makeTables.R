@@ -1,8 +1,10 @@
 #!/usr/bin/env RScript --vanilla
 
-library(tidyverse)
-library(openxlsx)
-library(optparse)
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(openxlsx)
+  library(optparse)
+  })
  
 option_list <- list(
   make_option(c("-T", "--threshold"), type = "double", default = NULL, 
