@@ -8,6 +8,7 @@
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Output](#Output)
+- [Citation](#Citation)
 
 ## Description
 
