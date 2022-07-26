@@ -12,7 +12,7 @@
 
 ## Description
 
-RDscan is a [snakemake](https://snakemake.readthedocs.io/en/stable/) pipeline to find deletions and putative [regions of difference](https://jb.asm.org/content/178/5/1274.short) (RD) in [mycobacterium tuberculosis complex](https://en.wikipedia.org/wiki/Mycobacterium_tuberculosis_complex) (MTBC) genomes, it is also capable to determine already known or user defined RDs.
+RDscan is a [snakemake](https://snakemake.readthedocs.io/en/stable/) workflow to find deletions and putative [regions of difference](https://jb.asm.org/content/178/5/1274.short) (RD) in [mycobacterium tuberculosis complex](https://en.wikipedia.org/wiki/Mycobacterium_tuberculosis_complex) (MTBC) genomes, it is also capable to determine already known or user defined RDs.
 
 ## Installation
 
@@ -37,7 +37,7 @@ conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
 
-Get **RDscan** pipeline:
+Get **RDscan** snakemake workflow:
 
 ```bash
 git clone https://github.com/dbespiatykh/RDscan.git
