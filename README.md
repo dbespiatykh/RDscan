@@ -50,7 +50,7 @@ Install all required dependencies:
 ```bash
 cd RDscan
 conda install -c conda-forge mamba
-mamba create -c bioconda -c conda-forge --name snakemake snakemake snakedeploy
+mamba env create --file environment.yml
 ```
 
 ## Usage
@@ -98,7 +98,7 @@ Project folder should have the following structure:
 Activate **RDscan** environment:
 
 ```bash
-conda activate snakemake
+conda activate RDscan
 ```
 
 Run pipeline:
