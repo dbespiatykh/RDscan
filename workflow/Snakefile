@@ -1,0 +1,22 @@
+
+include: "rules/common.smk"
+
+
+## Target rule -----------------------------------------------
+
+
+rule all:
+    input:
+        "results/RD_known.tsv",
+        "results/RD_known.xlsx",
+        "results/RD_known.bin.tsv",
+        "results/RD_table.tsv",
+
+
+## Workflow rules --------------------------------------------
+
+
+include: "rules/reference.smk"
+include: "rules/mapping.smk"
+include: "rules/novel_discovery.smk"
+include: "rules/known_rds.smk"

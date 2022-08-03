@@ -1,0 +1,16 @@
+# You can adjust the parameters according to your setup
+NCBI:
+  email: user@mail.com # Email required by NCBI to avoid abuse
+
+files:
+  samples: config/samples.tsv # The path to the tab-separated values file containing the paths to the analysed samples
+  rvd1_tbd1: config/RvD1_TbD1.fa # The path to the FASTA file with RvD1 and TbD1 deletions
+  is6110: config/IS6110.bed # A BED file with IS6110 positions
+  rds: config/RD.bed # A BED file with known RDs
+
+BWA:
+  threads: 4 # Threads for BWA-MEM
+
+filters:
+  main: "-i 'INFO/SVLEN[0] > 500 & INFO/SVLEN[0] < 30000'"
+  threshold: 0.05 # Threshold value for RDs coverage
