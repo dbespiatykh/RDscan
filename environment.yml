@@ -1,0 +1,6 @@
+name: RDscan
+channels:
+  - bioconda
+dependencies:
+  - snakemake
+  - biopython
