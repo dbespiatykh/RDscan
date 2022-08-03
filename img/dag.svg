@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 421.5 974" style="enable-background:new 0 0 421.5 974;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#D8AC56;stroke-width:2;}
+	.st1{font-family:'ArialMT';}
+	.st2{font-size:10px;}
+	.st3{fill:#FFFFFF;stroke:#56D882;stroke-width:2;}
+	.st4{fill:none;stroke:#808080;stroke-width:2;}
+	.st5{fill:#808080;stroke:#808080;stroke-width:2;}
+	.st6{fill:#FFFFFF;stroke:#D87556;stroke-width:2;}
+	.st7{fill:#FFFFFF;stroke:#568AD8;stroke-width:2;}
+	.st8{fill:#FFFFFF;stroke:#56D8D0;stroke-width:2;}
+	.st9{fill:#FFFFFF;stroke:#61D856;stroke-width:2;}
+	.st10{fill:#FFFFFF;stroke:#56D89A;stroke-width:2;}
+	.st11{fill:#FFFFFF;stroke:#D88D56;stroke-width:2;}
+	.st12{fill:#FFFFFF;stroke:#56D863;stroke-width:2;}
+	.st13{fill:#FFFFFF;stroke:#5673D8;stroke-width:2;}
+	.st14{fill:#FFFFFF;stroke:#97D856;stroke-width:2;}
+	.st15{fill:#FFFFFF;stroke:#80D856;stroke-width:2;}
+	.st16{fill:#FFFFFF;stroke:#B6D856;stroke-width:2;}
+	.st17{fill:#FFFFFF;stroke:#56A9D8;stroke-width:2;}
+	.st18{fill:#FFFFFF;stroke:#56D8B9;stroke-width:2;}
+	.st19{fill:#FFFFFF;stroke:#D8C356;stroke-width:2;}
+	.st20{fill:#FFFFFF;stroke:#CED856;stroke-width:2;}
+	.st21{fill:#FFFFFF;stroke:#D85656;stroke-width:2;}
+</style>
+<path class="st0" d="M158,937h-30c-6,0-12,6-12,12v12c0,6,6,12,12,12h30c6,0,12-6,12-12v-12C170,943,164,937,158,937"/>
+<text transform="matrix(1 0 0 1 137.9976 957.5)" class="st1 st2">all</text>
+<path class="st3" d="M126,649H78c-6,0-12,6-12,12v12c0,6,6,12,12,12h48c6,0,12-6,12-12v-12C138,655,132,649,126,649"/>
+<text transform="matrix(1 0 0 1 73.6504 669.5)" class="st1 st2">make_tables</text>
+<path class="st4" d="M103.3,685.1c3.2,38.7,12.1,135.8,26.7,215.9c1.6,8.5,3.6,17.7,5.7,26"/>
+<polygon class="st5" points="139.2,926.4 138.3,936.9 132.4,928.1 "/>
+<path class="st6" d="M104,361H58c-6,0-12,6-12,12v12c0,6,6,12,12,12h46c6,0,12-6,12-12v-12C116,367,110,361,104,361"/>
+<text transform="matrix(1 0 0 1 53.7563 381.5)" class="st1 st2">concatenate</text>
+<path class="st4" d="M82.2,397c3.5,47.7,13.4,182.8,17.7,241.3"/>
+<polygon class="st5" points="103.5,638.5 100.7,648.7 96.5,639 "/>
+<path class="st7" d="M301,289h-80c-6,0-12,6-12,12v12c0,6,6,12,12,12h80c6,0,12-6,12-12v-12C313,295,307,289,301,289"/>
+<text transform="matrix(1 0 0 1 215.9707 309.5)" class="st1 st2">calculate_proportion</text>
+<path class="st4" d="M217,325.1c-27.8,10.8-63.5,24.7-91.3,35.5"/>
+<polygon class="st5" points="126.7,364 116.2,364.3 124.2,357.4 "/>
+<path class="st8" d="M291,217h-56c-6,0-12,6-12,12v12c0,6,6,12,12,12h56c6,0,12-6,12-12v-12C303,223,297,217,291,217"/>
+<text transform="matrix(1 0 0 1 229.9189 237.5)" class="st1 st2">mosdepth_bed</text>
+<path class="st4" d="M262.5,253.3c-0.2,7.7-0.5,17-0.7,25.6"/>
+<polygon class="st5" points="265.3,279 261.5,288.9 258.3,278.8 "/>
+<path class="st9" d="M318.5,145h-89c-6,0-12,6-12,12v12c0,6,6,12,12,12h89c6,0,12-6,12-12v-12C330.5,151,324.5,145,318.5,145"/>
+<text transform="matrix(1 0 0 1 250.936 160)" class="st1 st2">bwa_mem</text>
+<text transform="matrix(1 0 0 1 225.0815 171)" class="st1 st2">sample: SRR2024925</text>
+<path class="st4" d="M271.3,181.3c-1.2,7.7-2.7,17-4,25.6"/>
+<polygon class="st5" points="270.7,207.6 265.7,216.9 263.8,206.5 "/>
+<path class="st10" d="M408.5,217h-75c-6,0-12,6-12,12v12c0,6,6,12,12,12h75c6,0,12-6,12-12v-12C420.5,223,414.5,217,408.5,217"/>
+<text transform="matrix(1 0 0 1 328.4731 237.5)" class="st1 st2">compute_coverage</text>
+<path class="st4" d="M298,181.3c12.3,8.9,27.5,19.9,40.9,29.5"/>
+<polygon class="st5" points="341.2,208.2 347.3,216.9 337.1,213.9 "/>
+<path class="st11" d="M227.5,73h-39c-6,0-12,6-12,12v12c0,6,6,12,12,12h39c6,0,12-6,12-12V85C239.5,79,233.5,73,227.5,73"/>
+<text transform="matrix(1 0 0 1 184.0938 93.5)" class="st1 st2">bwa_index</text>
+<path class="st4" d="M224.3,109.3c8,8.5,17.8,18.8,26.5,28.1"/>
+<polygon class="st5" points="253.6,135.2 257.9,144.9 248.5,140 "/>
+<path class="st9" d="M187.5,145h-89c-6,0-12,6-12,12v12c0,6,6,12,12,12h89c6,0,12-6,12-12v-12C199.5,151,193.5,145,187.5,145"/>
+<text transform="matrix(1 0 0 1 119.936 160)" class="st1 st2">bwa_mem</text>
+<text transform="matrix(1 0 0 1 94.0815 171)" class="st1 st2">sample: SRR2024996</text>
+<path class="st4" d="M191.9,109.3c-7.9,8.5-17.5,18.8-26.1,28.1"/>
+<polygon class="st5" points="168.2,140 158.9,144.9 163.1,135.2 "/>
+<path class="st12" d="M245,1h-74c-6,0-12,6-12,12v12c0,6,6,12,12,12h74c6,0,12-6,12-12V13C257,7,251,1,245,1"/>
+<text transform="matrix(1 0 0 1 165.7441 21.5)" class="st1 st2">download_genome</text>
+<path class="st4" d="M208,37.3c0,7.7,0,17,0,25.6"/>
+<polygon class="st5" points="211.5,62.9 208,72.9 204.5,62.9 "/>
+<path class="st7" d="M93,289H13c-6,0-12,6-12,12v12c0,6,6,12,12,12h80c6,0,12-6,12-12v-12C105,295,99,289,93,289"/>
+<text transform="matrix(1 0 0 1 7.9707 309.5)" class="st1 st2">calculate_proportion</text>
+<path class="st4" d="M59.9,325.3c3.2,7.9,7,17.4,10.5,26.2"/>
+<polygon class="st5" points="73.7,350.3 74.2,360.9 67.2,352.9 "/>
+<path class="st8" d="M75,217H19c-6,0-12,6-12,12v12c0,6,6,12,12,12h56c6,0,12-6,12-12v-12C87,223,81,217,75,217"/>
+<text transform="matrix(1 0 0 1 13.9189 237.5)" class="st1 st2">mosdepth_bed</text>
+<path class="st4" d="M48.5,253.3c0.7,7.7,1.5,17,2.2,25.6"/>
+<polygon class="st5" points="54.2,278.6 51.5,288.9 47.2,279.2 "/>
+<path class="st4" d="M119.3,181.3c-12.2,8.9-27.3,19.9-40.4,29.5"/>
+<polygon class="st5" points="80.6,213.8 70.5,216.9 76.5,208.2 "/>
+<path class="st10" d="M192.5,217h-75c-6,0-12,6-12,12v12c0,6,6,12,12,12h75c6,0,12-6,12-12v-12C204.5,223,198.5,217,192.5,217"/>
+<text transform="matrix(1 0 0 1 112.4731 237.5)" class="st1 st2">compute_coverage</text>
+<path class="st4" d="M146,181.3c1.3,7.7,2.9,17,4.4,25.6"/>
+<polygon class="st5" points="153.8,206.5 152.1,216.9 146.9,207.6 "/>
+<path class="st13" d="M200.5,865h-49c-6,0-12,6-12,12v12c0,6,6,12,12,12h49c6,0,12-6,12-12v-12C212.5,871,206.5,865,200.5,865"/>
+<text transform="matrix(1 0 0 1 146.8105 885.5)" class="st1 st2">annotate_rds</text>
+<path class="st4" d="M167.8,901.3c-3.8,8-8.3,17.6-12.5,26.4"/>
+<polygon class="st5" points="158.5,929.3 151.1,936.9 152.2,926.4 "/>
+<path class="st14" d="M206.5,793h-51c-6,0-12,6-12,12v12c0,6,6,12,12,12h51c6,0,12-6,12-12v-12C218.5,799,212.5,793,206.5,793"/>
+<text transform="matrix(1 0 0 1 150.9805 813.5)" class="st1 st2">convert2table</text>
+<path class="st4" d="M179.8,829.3c-0.5,7.7-1.2,17-1.8,25.6"/>
+<polygon class="st5" points="181.4,855.2 177.2,864.9 174.4,854.7 "/>
+<path class="st15" d="M207,721h-38c-6,0-12,6-12,12v12c0,6,6,12,12,12h38c6,0,12-6,12-12v-12C219,727,213,721,207,721"/>
+<text transform="matrix(1 0 0 1 164.6577 741.5)" class="st1 st2">merge_vcf</text>
+<path class="st4" d="M186.3,757.3c-0.8,7.7-1.7,17-2.6,25.6"/>
+<polygon class="st5" points="187.2,783.3 182.7,792.9 180.2,782.6 "/>
+<path class="st16" d="M212.5,649h-35c-6,0-12,6-12,12v12c0,6,6,12,12,12h35c6,0,12-6,12-12v-12C224.5,655,218.5,649,212.5,649"/>
+<text transform="matrix(1 0 0 1 173.8818 669.5)" class="st1 st2">make_list</text>
+<path class="st4" d="M193.3,685.3c-0.8,7.7-1.7,17-2.6,25.6"/>
+<polygon class="st5" points="194.2,711.3 189.7,720.9 187.2,710.6 "/>
+<path class="st17" d="M286,577h-30c-6,0-12,6-12,12v12c0,6,6,12,12,12h30c6,0,12-6,12-12v-12C298,583,292,577,286,577"/>
+<text transform="matrix(1 0 0 1 252.3843 597.5)" class="st1 st2">filter_vcf</text>
+<path class="st4" d="M252.2,613.3c-9.4,8.7-20.9,19.2-31.1,28.7"/>
+<polygon class="st5" points="223.3,644.7 213.6,648.9 218.6,639.5 "/>
+<path class="st18" d="M354,433h-30c-6,0-12,6-12,12v12c0,6,6,12,12,12h30c6,0,12-6,12-12v-12C366,439,360,433,354,433"/>
+<text transform="matrix(1 0 0 1 327.0469 453.5)" class="st1 st2">bgzip</text>
+<path class="st4" d="M318.6,469.2c-10.1,9.5-21.5,22.2-28.6,35.8c-10,19.2-14.7,43.4-17,61.7"/>
+<polygon class="st5" points="276.5,567.1 272,576.7 269.5,566.4 "/>
+<path class="st19" d="M367,505h-56c-6,0-12,6-12,12v12c0,6,6,12,12,12h56c6,0,12-6,12-12v-12C379,511,373,505,367,505"/>
+<text transform="matrix(1 0 0 1 307.0347 525.5)" class="st1 st2">bcftools_index</text>
+<path class="st4" d="M339,469.3c0,7.7,0,17,0,25.6"/>
+<polygon class="st5" points="342.5,494.9 339,504.9 335.5,494.9 "/>
+<path class="st20" d="M376.5,361h-35c-6,0-12,6-12,12v12c0,6,6,12,12,12h35c6,0,12-6,12-12v-12C388.5,367,382.5,361,376.5,361"/>
+<text transform="matrix(1 0 0 1 337.877 381.5)" class="st1 st2">clean_vcf</text>
+<path class="st4" d="M354.1,397.3c-2.2,7.8-4.9,17.2-7.4,25.9"/>
+<polygon class="st5" points="350,424.2 343.9,432.9 343.3,422.3 "/>
+<path class="st21" d="M384.5,289h-35c-6,0-12,6-12,12v12c0,6,6,12,12,12h35c6,0,12-6,12-12v-12C396.5,295,390.5,289,384.5,289"/>
+<text transform="matrix(1 0 0 1 345.6035 309.5)" class="st1 st2">make_vcf</text>
+<path class="st4" d="M365,325.3c-0.9,7.7-1.9,17-2.9,25.6"/>
+<polygon class="st5" points="365.6,351.4 361,360.9 358.6,350.6 "/>
+<path class="st4" d="M370,253.3c-0.4,7.7-1,17-1.5,25.6"/>
+<polygon class="st5" points="372,279.1 368,288.9 365,278.7 "/>
+<path class="st4" d="M322.2,541.3c-8.3,8.6-18.5,19-27.6,28.4"/>
+<polygon class="st5" points="297.1,572.2 287.6,576.9 292.1,567.3 "/>
+<path class="st17" d="M210,577h-30c-6,0-12,6-12,12v12c0,6,6,12,12,12h30c6,0,12-6,12-12v-12C222,583,216,577,210,577"/>
+<text transform="matrix(1 0 0 1 176.3843 597.5)" class="st1 st2">filter_vcf</text>
+<path class="st4" d="M195,613.3c0,7.7,0,17,0,25.6"/>
+<polygon class="st5" points="198.5,638.9 195,648.9 191.5,638.9 "/>
+<path class="st18" d="M179,433h-30c-6,0-12,6-12,12v12c0,6,6,12,12,12h30c6,0,12-6,12-12v-12C191,439,185,433,179,433"/>
+<text transform="matrix(1 0 0 1 152.0469 453.5)" class="st1 st2">bgzip</text>
+<path class="st4" d="M184.4,469.5c9.4,9.4,19.6,21.9,24.6,35.5c7.4,20.1,2.9,44.2-2.9,62.2"/>
+<polygon class="st5" points="209.3,568.5 202.7,576.8 202.7,566.2 "/>
+<path class="st19" d="M188,505h-56c-6,0-12,6-12,12v12c0,6,6,12,12,12h56c6,0,12-6,12-12v-12C200,511,194,505,188,505"/>
+<text transform="matrix(1 0 0 1 128.0347 525.5)" class="st1 st2">bcftools_index</text>
+<path class="st4" d="M163,469.3c-0.4,7.7-1,17-1.5,25.6"/>
+<polygon class="st5" points="165,495.1 161,504.9 158.1,494.7 "/>
+<path class="st20" d="M181.5,361h-35c-6,0-12,6-12,12v12c0,6,6,12,12,12h35c6,0,12-6,12-12v-12C193.5,367,187.5,361,181.5,361"/>
+<text transform="matrix(1 0 0 1 142.877 381.5)" class="st1 st2">clean_vcf</text>
+<path class="st4" d="M164,397.3c0,7.7,0,17,0,25.6"/>
+<polygon class="st5" points="167.5,422.9 164,432.9 160.5,422.9 "/>
+<path class="st21" d="M174.5,289h-35c-6,0-12,6-12,12v12c0,6,6,12,12,12h35c6,0,12-6,12-12v-12C186.5,295,180.5,289,174.5,289"/>
+<text transform="matrix(1 0 0 1 135.6035 309.5)" class="st1 st2">make_vcf</text>
+<path class="st4" d="M158.7,325.3c0.8,7.7,1.7,17,2.6,25.6"/>
+<polygon class="st5" points="164.8,350.6 162.3,360.9 157.8,351.3 "/>
+<path class="st4" d="M155.5,253.3c0.2,7.7,0.5,17,0.7,25.6"/>
+<polygon class="st5" points="159.7,278.8 156.5,288.9 152.7,279 "/>
+<path class="st4" d="M168.6,541.3c4,8,8.8,17.6,13.2,26.4"/>
+<polygon class="st5" points="185.1,566.4 186.4,576.9 178.9,569.5 "/>
+</svg>

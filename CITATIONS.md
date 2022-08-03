@@ -41,14 +41,6 @@
 
   > Petr Danecek, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu Ohan, Martin O Pollard, Andrew Whitwham, Thomas Keane, Shane A McCarthy, Robert M Davies, Heng Li, Twelve years of SAMtools and BCFtools, GigaScience, Volume 10, Issue 2, February 2021, giab008, https://doi.org/10.1093/gigascience/giab008
 
-- [Duphold](https://academic.oup.com/gigascience/article/8/4/giz040/5477467/)
-
-  > Brent S Pedersen, Aaron R Quinlan, Duphold: scalable, depth-based annotation and curation of high-confidence structural variant calls, GigaScience, Volume 8, Issue 4, April 2019, giz040, https://doi.org/10.1093/gigascience/giz040
-
-- [SnpEff](https://www.tandfonline.com/doi/full/10.4161/fly.19695/)
-
-  > Pablo Cingolani, Adrian Platts, Le Lily Wang, Melissa Coon, Tung Nguyen, Luan Wang, Susan J. Land, Xiangyi Lu & Douglas M. Ruden (2012) A program for annotating and predicting the effects of single nucleotide polymorphisms, SnpEff, Fly, 6:2, 80-92, DOI: 10.4161/fly.19695
-
 - [Mosdepth](https://academic.oup.com/bioinformatics/article/34/5/867/4583630/)
 
   > Brent S Pedersen, Aaron R Quinlan, Mosdepth: quick coverage calculation for genomes and exomes, Bioinformatics, Volume 34, Issue 5, 01 March 2018, Pages 867–868, https://doi.org/10.1093/bioinformatics/btx699
