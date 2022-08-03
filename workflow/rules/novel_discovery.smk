@@ -124,7 +124,7 @@ rule annotate_rds:
         "RD_table.raw.tsv",
         config["files"]["rds"],
     output:
-        "results/RD_table.tsv",
+        "results/RD_putative.tsv",
     log:
         "logs/annotate/novel.log",
     conda:

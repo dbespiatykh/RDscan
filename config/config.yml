@@ -12,5 +12,5 @@ BWA:
   threads: 4 # Threads for BWA-MEM
 
 filters:
-  main: "-i 'INFO/SVLEN[0] > 500 & INFO/SVLEN[0] < 30000'"
+  main: "-i 'INFO/SVLEN[0] > 500 & INFO/SVLEN[0] < 30000'" # Filter deletions by length
   threshold: 0.05 # Threshold value for RDs coverage

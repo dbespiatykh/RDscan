@@ -10,7 +10,7 @@ rule all:
         "results/RD_known.tsv",
         "results/RD_known.xlsx",
         "results/RD_known.bin.tsv",
-        "results/RD_table.tsv",
+        "results/RD_putative.tsv",
 
 
 ## Workflow rules --------------------------------------------
