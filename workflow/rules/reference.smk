@@ -1,16 +1,17 @@
-from snakemake.remote.NCBI import RemoteProvider as NCBIRemoteProvider
-
-NCBI = NCBIRemoteProvider(email=config["NCBI"]["email"])
-
-
 rule download_genome:
-    input:
-        genome=NCBI.remote("NC_000962.3.fasta", db="nuccore"),
-        rd=config["files"]["rvd1_tbd1"],
     output:
         "ref/NC_000962.3.fa",
-    run:
-        shell("cat {input.genome} {input.rd} > {output}")
+    params:
+        accession=config["NCBI"]["H37Rv-reference-genome"],
+    log:
+        "logs/ncbi/ref_dwn.log",
+    conda:
+        "../envs/entrez.yaml"
+    resources:
+        ncbi_api_requests=1,
+    shell:
+        "((esearch -db nucleotide -query '{params.accession}' | "
+        "efetch -format fasta > {output}) && [ -s {output} ]) 2> {log}"
 
 
 rule samtools_genome_index:
