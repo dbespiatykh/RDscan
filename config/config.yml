@@ -1,6 +1,7 @@
 # You can adjust the parameters according to your setup
 NCBI:
-  email: user@mail.com # Email required by NCBI to avoid abuse
+  H37Rv-reference-genome:
+    - NC_000962.3 # Mycobacterium tuberculosis H37Rv RefSeq accession number
 
 files:
   samples: config/samples.tsv # The path to the tab-separated values file containing the paths to the analysed samples
