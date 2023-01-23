@@ -7,11 +7,13 @@ rule compute_coverage:
         bed="bed/{sample}.bed",
     conda:
         "../envs/calculations.yaml"
+    log:
+        "logs/bedtools/{sample}.coverage.log"
     shell:
         """
-        parallel bedtools genomecov -bga -ibam ::: {input.bam}\
+        (parallel bedtools genomecov -bga -ibam ::: {input.bam}\
          | awk '$4<'$(samtools depth  -aa {input.bam} |  awk '{{sum+=$3}} END {{print sum/4411532*0.1}}')''\
-            | bedtools merge -d 1500 | bedtools subtract -f 0.30 -a stdin -b {input.mask} -A > {output.bed}
+            | bedtools merge -d 1500 | bedtools subtract -f 0.30 -a stdin -b {input.mask} -A > {output.bed}) 2> {log}
         """
 
 
@@ -39,8 +41,10 @@ rule clean_vcf:
         temp("vcf/{sample}.vcf"),
     conda:
         "../envs/calculations.yaml"
+    log:
+        "logs/shell/{sample}.clean_vcf.log"
     shell:
-        "sed -e 's/;CIPOS=0,0;CIEND=0,0//' -e 's/-1/1/' -e 's/Sample/{wildcards.sample}/' {input} > {output}"
+        "(sed -e 's/;CIPOS=0,0;CIEND=0,0//' -e 's/-1/1/' -e 's/Sample/{wildcards.sample}/' {input} > {output}) 2> {log}"
 
 
 ## Compress VCFs
@@ -62,6 +66,8 @@ rule bcftools_index:
         "vcf/{sample}.vcf.gz",
     output:
         "vcf/{sample}.vcf.gz.csi",
+    log:
+        "logs/bcftools/{sample}.index.log"
     wrapper:
         "v1.7.1/bio/bcftools/index"
 
@@ -86,8 +92,12 @@ rule make_list:
         expand("vcf/{sample}.filtered.vcf", sample=samples.index),
     output:
         temp("vcf/vcf_list.txt"),
+    conda:
+        "../envs/calculations.yaml"
+    log:
+        "logs/shell/make_list.log",
     shell:
-        "ls {input} > {output}"
+        "(ls {input} > {output}) 2> {log}"
 
 
 ## Merge VCF files
