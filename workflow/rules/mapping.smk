@@ -2,10 +2,10 @@
 rule bwa_mem:
     input:
         reads=get_fastq,
-        idx=multiext("ref/NC_000962.3.fa", ".amb", ".ann", ".bwt", ".pac", ".sa"),
+        idx=multiext("resources/ref/NC_000962.3.fa", ".amb", ".ann", ".bwt", ".pac", ".sa"),
     output:
-        bam="mapped/{sample}.bam",
-        index="mapped/{sample}.bam.bai",
+        bam="results/mapped/{sample}.bam",
+        index="results/mapped/{sample}.bam.bai",
     log:
         "logs/bwa_mem_sambamba/{sample}.log",
     params:

@@ -1,6 +1,6 @@
 rule download_genome:
     output:
-        "ref/NC_000962.3.fa",
+        "resources/ref/NC_000962.3.fa",
     params:
         accession=config["NCBI"]["H37Rv-reference-genome"],
     log:
@@ -16,9 +16,9 @@ rule download_genome:
 
 rule samtools_genome_index:
     input:
-        "ref/NC_000962.3.fa",
+        "resources/ref/NC_000962.3.fa",
     output:
-        "ref/NC_000962.3.fa.fai",
+        "resources/ref/NC_000962.3.fa.fai",
     log:
         "logs/samtools/ref_index.log",
     wrapper:
@@ -27,9 +27,9 @@ rule samtools_genome_index:
 
 rule bwa_index:
     input:
-        "ref/NC_000962.3.fa",
+        "resources/ref/NC_000962.3.fa",
     output:
-        idx=multiext("ref/NC_000962.3.fa", ".amb", ".ann", ".bwt", ".pac", ".sa"),
+        idx=multiext("resources/ref/NC_000962.3.fa", ".amb", ".ann", ".bwt", ".pac", ".sa"),
     log:
         "logs/bwa/ref_index.log",
     params:

@@ -1,14 +1,15 @@
 # Compute median coverage in known RD regions
 rule mosdepth_bed:
     input:
-        bam="mapped/{sample}.bam",
-        bai="mapped/{sample}.bam.bai",
+        bam="results/mapped/{sample}.bam",
+        bai="results/mapped/{sample}.bam.bai",
         bed=config["files"]["rds"],
     output:
-        "mosdepth_bed/{sample}.mosdepth.global.dist.txt",
-        "mosdepth_bed/{sample}.mosdepth.region.dist.txt",
-        "mosdepth_bed/{sample}.regions.bed.gz",
-        summary="mosdepth_bed/{sample}.mosdepth.summary.txt",
+        temp("results/mosdepth_bed/{sample}.mosdepth.global.dist.txt"),
+        temp("results/mosdepth_bed/{sample}.mosdepth.region.dist.txt"),
+        temp("results/mosdepth_bed/{sample}.regions.bed.gz"),
+        temp("results/mosdepth_bed/{sample}.regions.bed.gz.csi"),
+        summary=temp("results/mosdepth_bed/{sample}.mosdepth.summary.txt"),
     log:
         "logs/mosdepth_bed/{sample}.log",
     params:
@@ -21,9 +22,9 @@ rule mosdepth_bed:
 ## Calculate the proportion of the read depth in RD regions to the total chromosome depth
 rule calculate_proportion:
     input:
-        "mosdepth_bed/{sample}.regions.bed.gz",
+        "results/mosdepth_bed/{sample}.regions.bed.gz",
     output:
-        "bed/{sample}.proportion.bed",
+        temp("results/bed/{sample}.proportion.bed"),
     log:
         "logs/annotate/{sample}.proportion.log",
     conda:
@@ -35,9 +36,9 @@ rule calculate_proportion:
 ## Concatenate BED files
 rule concatenate:
     input:
-        bed=expand("bed/{sample}.proportion.bed", sample=samples.index),
+        bed=expand("results/bed/{sample}.proportion.bed", sample=samples.index),
     output:
-        "results/all_concat.bed",
+        temp("results/all_concat.bed"),
     log:
         "logs/annotate/concatenate.log",
     conda:

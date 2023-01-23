@@ -1,10 +1,10 @@
 ## Find regions with low coverage
 rule compute_coverage:
     input:
-        bam="mapped/{sample}.bam",
+        bam="results/mapped/{sample}.bam",
         mask=config["files"]["is6110"],
     output:
-        bed="bed/{sample}.bed",
+        bed=temp("results/bed/{sample}.bed"),
     conda:
         "../envs/calculations.yaml"
     log:
@@ -22,7 +22,7 @@ rule make_vcf:
     input:
         bed_cov=rules.compute_coverage.output.bed,
     output:
-        vcf=temp("vcf/{sample}.raw.vcf"),
+        vcf=temp("results/vcf/{sample}.raw.vcf"),
     conda:
         "../envs/calculations.yaml"
     log:
@@ -36,9 +36,9 @@ rule make_vcf:
 ## Remove unnecessary info from VCFs
 rule clean_vcf:
     input:
-        "vcf/{sample}.raw.vcf",
+        "results/vcf/{sample}.raw.vcf",
     output:
-        temp("vcf/{sample}.vcf"),
+        temp("results/vcf/{sample}.vcf"),
     conda:
         "../envs/calculations.yaml"
     log:
@@ -50,9 +50,9 @@ rule clean_vcf:
 ## Compress VCFs
 rule bgzip:
     input:
-        "vcf/{sample}.vcf",
+        "results/vcf/{sample}.vcf",
     output:
-        "vcf/{sample}.vcf.gz",
+        temp("results/vcf/{sample}.vcf.gz"),
     threads: 1
     log:
         "logs/bgzip/{sample}.log",
@@ -63,9 +63,9 @@ rule bgzip:
 ## Index VCFs
 rule bcftools_index:
     input:
-        "vcf/{sample}.vcf.gz",
+        "results/vcf/{sample}.vcf.gz",
     output:
-        "vcf/{sample}.vcf.gz.csi",
+        temp("results/vcf/{sample}.vcf.gz.csi"),
     log:
         "logs/bcftools/{sample}.index.log"
     wrapper:
@@ -74,10 +74,10 @@ rule bcftools_index:
 
 rule filter_vcf:
     input:
-        "vcf/{sample}.vcf.gz",
-        "vcf/{sample}.vcf.gz.csi",
+        "results/vcf/{sample}.vcf.gz",
+        "results/vcf/{sample}.vcf.gz.csi",
     output:
-        "vcf/{sample}.filtered.vcf",
+        "results/vcf/{sample}.filtered.vcf",
     log:
         "logs/bcftools/{sample}.filter.vcf.log",
     params:
@@ -89,9 +89,9 @@ rule filter_vcf:
 ## Create list of VCF files
 rule make_list:
     input:
-        expand("vcf/{sample}.filtered.vcf", sample=samples.index),
+        expand("results/vcf/{sample}.filtered.vcf", sample=samples.index),
     output:
-        temp("vcf/vcf_list.txt"),
+        temp("results/vcf/vcf_list.txt"),
     conda:
         "../envs/calculations.yaml"
     log:
@@ -103,9 +103,9 @@ rule make_list:
 ## Merge VCF files
 rule merge_vcf:
     input:
-        "vcf/vcf_list.txt",
+        "results/vcf/vcf_list.txt",
     output:
-        "vcf/merged.vcf",
+        temp("results/vcf/merged.vcf"),
     conda:
         "../envs/calculations.yaml"
     log:
@@ -117,9 +117,9 @@ rule merge_vcf:
 ## Convert multisample VCF to tab-separated format
 rule convert2table:
     input:
-        "vcf/merged.vcf",
+        "results/vcf/merged.vcf",
     output:
-        temp("RD_table.raw.tsv"),
+        temp("results/RD_table.raw.tsv"),
     conda:
         "../envs/gatk4.yaml"
     log:
@@ -131,7 +131,7 @@ rule convert2table:
 ## Annotate putative RD regions
 rule annotate_rds:
     input:
-        "RD_table.raw.tsv",
+        "results/RD_table.raw.tsv",
         config["files"]["rds"],
     output:
         "results/RD_putative.tsv",
