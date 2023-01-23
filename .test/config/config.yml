@@ -1,0 +1,17 @@
+# You can adjust the parameters according to your setup
+NCBI:
+  H37Rv-reference-genome:
+    - NC_000962.3 # Mycobacterium tuberculosis H37Rv RefSeq accession number
+
+files:
+  samples: config/samples.tsv # The path to the tab-separated values file containing the paths to the analysed samples
+  rvd1_tbd1: resources/RvD1_TbD1.fa # The path to the FASTA file with RvD1 and TbD1 deletions
+  is6110: resources/IS6110.bed # A BED file with IS6110 positions
+  rds: resources/RD.bed # A BED file with known RDs
+
+BWA:
+  threads: 4 # Threads for BWA-MEM
+
+filters:
+  main: "-i 'INFO/SVLEN[0] > 500 & INFO/SVLEN[0] < 30000'" # Filter deletions by length
+  threshold: 0.05 # Threshold value for RDs coverage
