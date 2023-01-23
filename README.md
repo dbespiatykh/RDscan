@@ -59,11 +59,12 @@ mamba env create --file environment.yml
 
 ## Usage
 
-**Rulegraph of the pipeline**
-
-<br>
-
+<details>
+  <summary>Rulegraph of the pipeline</summary>
+  
 ![Rulegraph](img/dag.svg)
+  
+</details>
 
 <br>
 
