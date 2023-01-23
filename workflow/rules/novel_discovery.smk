@@ -22,7 +22,7 @@ rule make_vcf:
     input:
         bed_cov=rules.compute_coverage.output.bed,
     output:
-        vcf=temp("results/vcf/{sample}.raw.vcf"),
+        vcf=temp("results/vcf/{sample,\w+}.raw.vcf"),
     conda:
         "../envs/calculations.yaml"
     log:
@@ -77,7 +77,7 @@ rule filter_vcf:
         "results/vcf/{sample}.vcf.gz",
         "results/vcf/{sample}.vcf.gz.csi",
     output:
-        "results/vcf/{sample}.filtered.vcf",
+        temp("results/vcf/{sample}.filtered.vcf"),
     log:
         "logs/bcftools/{sample}.filter.vcf.log",
     params:
@@ -103,7 +103,8 @@ rule make_list:
 ## Merge VCF files
 rule merge_vcf:
     input:
-        "results/vcf/vcf_list.txt",
+        list="results/vcf/vcf_list.txt",
+        vcfs=expand("results/vcf/{sample}.filtered.vcf", sample=samples.index),
     output:
         temp("results/vcf/merged.vcf"),
     conda:
@@ -111,7 +112,7 @@ rule merge_vcf:
     log:
         "logs/survivor/merge.log",
     shell:
-        "SURVIVOR merge {input} 5000 1 1 0 0 100 {output} 2> {log}"
+        "SURVIVOR merge {input.list} 5000 1 1 0 0 100 {output} 2> {log}"
 
 
 ## Convert multisample VCF to tab-separated format
