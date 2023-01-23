@@ -4,6 +4,7 @@ channels:
   - defaults
 dependencies:
   - bedtools>=2.29
+  - htslib>=1.16
   - samtools==1.16.1
   - survivor==1.0.7
   - sed==4.7
