@@ -22,7 +22,7 @@ rule samtools_genome_index:
     log:
         "logs/samtools/ref_index.log",
     wrapper:
-        "v1.7.1/bio/samtools/faidx"
+        "v1.21.4/bio/samtools/faidx"
 
 
 rule bwa_index:
@@ -37,4 +37,4 @@ rule bwa_index:
     params:
         algorithm="bwtsw",
     wrapper:
-        "v1.7.1/bio/bwa/index"
+        "v1.21.4/bio/bwa/index"

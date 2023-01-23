@@ -57,7 +57,7 @@ rule bgzip:
     log:
         "logs/bgzip/{sample}.log",
     wrapper:
-        "v1.7.1/bio/bgzip"
+        "v1.21.4/bio/bgzip"
 
 
 ## Index VCFs
@@ -69,7 +69,7 @@ rule bcftools_index:
     log:
         "logs/bcftools/{sample}.index.log",
     wrapper:
-        "v1.7.1/bio/bcftools/index"
+        "v1.21.4/bio/bcftools/index"
 
 
 rule filter_vcf:
@@ -83,7 +83,7 @@ rule filter_vcf:
     params:
         filter=config["filters"]["main"],
     wrapper:
-        "v1.7.1/bio/bcftools/filter"
+        "v1.21.4/bio/bcftools/filter"
 
 
 ## Create list of VCF files

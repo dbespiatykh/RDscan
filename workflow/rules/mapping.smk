@@ -14,4 +14,4 @@ rule bwa_mem:
         extra=r"-R '@RG\tID:{sample}\tSM:{sample}'",
     threads: config["BWA"]["threads"]
     wrapper:
-        "v1.7.1/bio/bwa/mem-samblaster"
+        "v1.21.4/bio/bwa/mem-samblaster"
