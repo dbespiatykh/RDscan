@@ -3,6 +3,7 @@
 # pipeline for MTBC putative regions of difference discovery
 
 [![citation](https://img.shields.io/badge/DOI-10.1128%2FmSphere.00535--21-9f1d21)](https://doi.org/10.1128/mSphere.00535-21)
+[![Tests](https://github.com/dbespiatykh/RDscan/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/dbespiatykh/RDscan/actions/workflows/main.yml)
 
 - [pipeline for MTBC putative regions of difference discovery](#pipeline-for-mtbc-putative-regions-of-difference-discovery)
   - [Description](#description)
@@ -17,6 +18,8 @@
 RDscan is a [snakemake](https://snakemake.readthedocs.io/en/stable/) workflow to find deletions and putative [regions of difference](https://jb.asm.org/content/178/5/1274.short) (RDs) in [mycobacterium tuberculosis complex](https://en.wikipedia.org/wiki/Mycobacterium_tuberculosis_complex) (MTBC) genomes, it is also capable to determine already known or user defined RDs.
 
 ## Installation
+
+The usage of this workflow is described in the [Snakemake Workflow Catalog](https://snakemake.github.io/snakemake-workflow-catalog/?usage=dbespiatykh/RDscan), alternatively it can be installed as described below.
 
 Use the [Conda](https://docs.conda.io/en/latest/) package manager and [BioConda](https://bioconda.github.io/index.html) channel to install RDscan.
 
@@ -60,38 +63,6 @@ mamba env create --file environment.yml
 <br>
 
 ![Rulegraph](img/dag.svg)
-
-<br>
-
-Project folder should have the following structure:
-
-```bash
-📂 RDscan/
-├── config
-│   ├── IS6110.bed
-│   ├── RD.bed
-│   ├── RvD1_TbD1.fa
-│   ├── config.yml
-│   └── samples.tsv
-└── workflow
-    ├── envs
-    │   ├── calculations.yaml
-    │   ├── gatk4.yaml
-    │   └── renv.yaml
-    ├── rules
-    │   ├── calling.smk
-    │   ├── common.smk
-    │   ├── known_rds.smk
-    │   ├── mapping.smk
-    │   ├── novel_discovery.smk
-    │   └── reference.smk
-    ├── scripts
-    │   ├── annotate_novel.py
-    │   ├── concatenate_bed.py
-    │   ├── makeTables.R
-    │   └── proportions.py
-    └── Snakefile
-```
 
 <br>
 
