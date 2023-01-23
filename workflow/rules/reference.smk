@@ -29,7 +29,9 @@ rule bwa_index:
     input:
         "resources/ref/NC_000962.3.fa",
     output:
-        idx=multiext("resources/ref/NC_000962.3.fa", ".amb", ".ann", ".bwt", ".pac", ".sa"),
+        idx=multiext(
+            "resources/ref/NC_000962.3.fa", ".amb", ".ann", ".bwt", ".pac", ".sa"
+        ),
     log:
         "logs/bwa/ref_index.log",
     params:

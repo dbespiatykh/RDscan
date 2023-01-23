@@ -8,7 +8,7 @@ rule compute_coverage:
     conda:
         "../envs/calculations.yaml"
     log:
-        "logs/bedtools/{sample}.coverage.log"
+        "logs/bedtools/{sample}.coverage.log",
     shell:
         """
         (parallel bedtools genomecov -bga -ibam ::: {input.bam}\
@@ -42,7 +42,7 @@ rule clean_vcf:
     conda:
         "../envs/calculations.yaml"
     log:
-        "logs/shell/{sample}.clean_vcf.log"
+        "logs/shell/{sample}.clean_vcf.log",
     shell:
         "(sed -e 's/;CIPOS=0,0;CIEND=0,0//' -e 's/-1/1/' -e 's/Sample/{wildcards.sample}/' {input} > {output}) 2> {log}"
 
@@ -67,7 +67,7 @@ rule bcftools_index:
     output:
         temp("results/vcf/{sample}.vcf.gz.csi"),
     log:
-        "logs/bcftools/{sample}.index.log"
+        "logs/bcftools/{sample}.index.log",
     wrapper:
         "v1.7.1/bio/bcftools/index"
 
