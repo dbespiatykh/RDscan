@@ -114,9 +114,6 @@ __pycache__
 dev
 bed
 logs
-mapped
-mosdepth_bed
-ref
 results
-vcf
+resources/ref
 # End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,sublimetext,vim
