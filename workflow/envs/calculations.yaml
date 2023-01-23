@@ -4,10 +4,10 @@ channels:
   - defaults
 dependencies:
   - bedtools>=2.29
-  - samtools=1.15
-  - survivor=1.0.7
-  - sed=4.7
+  - samtools==1.16.1
+  - survivor==1.0.7
+  - sed==4.7
   - python==3.9
   - pandas==1.4.3
   - numpy==1.23.1
-  - parallel==20221122
+  - parallel
