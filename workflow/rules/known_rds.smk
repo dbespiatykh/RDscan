@@ -16,7 +16,7 @@ rule mosdepth_bed:
         extra="--no-per-base --use-median --fast-mode",
     threads: 4
     wrapper:
-        "v1.7.1/bio/mosdepth"
+        "v1.21.4/bio/mosdepth"
 
 
 ## Calculate the proportion of the read depth in RD regions to the total chromosome depth
