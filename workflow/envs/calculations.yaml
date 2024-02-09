@@ -10,4 +10,3 @@ dependencies:
   - python==3.9
   - pandas==1.4.3
   - numpy==1.23.1
-  - parallel
