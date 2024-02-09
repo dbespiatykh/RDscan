@@ -11,7 +11,7 @@ rule compute_coverage:
         "logs/bedtools/{sample}.coverage.log",
     shell:
         """
-        (parallel bedtools genomecov -bga -ibam ::: {input.bam}\
+        (bedtools genomecov -bga -ibam {input.bam}\
          | awk '$4<'$(samtools depth  -aa {input.bam} |  awk '{{sum+=$3}} END {{print sum/4411532*0.1}}')''\
             | bedtools merge -d 1500 | bedtools subtract -f 0.30 -a stdin -b {input.mask} -A > {output.bed}) 2> {log}
         """
@@ -22,7 +22,7 @@ rule make_vcf:
     input:
         bed_cov=rules.compute_coverage.output.bed,
     output:
-        vcf=temp("results/vcf/{sample,\w+}.raw.vcf"),
+        vcf=temp("results/vcf/{sample}.raw.vcf"),
     conda:
         "../envs/calculations.yaml"
     log:
@@ -36,9 +36,9 @@ rule make_vcf:
 ## Remove unnecessary info from VCFs
 rule clean_vcf:
     input:
-        "results/vcf/{sample}.raw.vcf",
+        rules.make_vcf.output.vcf,
     output:
-        temp("results/vcf/{sample}.vcf"),
+        vcf=temp("results/vcf/{sample}.clean.vcf"),
     conda:
         "../envs/calculations.yaml"
     log:
@@ -50,9 +50,9 @@ rule clean_vcf:
 ## Compress VCFs
 rule bgzip:
     input:
-        "results/vcf/{sample}.vcf",
+        rules.clean_vcf.output.vcf,
     output:
-        temp("results/vcf/{sample}.vcf.gz"),
+        vcfgz=temp("results/vcf/{sample}.vcf.gz"),
     threads: 1
     log:
         "logs/bgzip/{sample}.log",
@@ -63,9 +63,9 @@ rule bgzip:
 ## Index VCFs
 rule bcftools_index:
     input:
-        "results/vcf/{sample}.vcf.gz",
+        rules.bgzip.output.vcfgz,
     output:
-        temp("results/vcf/{sample}.vcf.gz.csi"),
+        idx=temp("results/vcf/{sample}.vcf.gz.csi"),
     log:
         "logs/bcftools/{sample}.index.log",
     wrapper:
@@ -74,8 +74,8 @@ rule bcftools_index:
 
 rule filter_vcf:
     input:
-        "results/vcf/{sample}.vcf.gz",
-        "results/vcf/{sample}.vcf.gz.csi",
+        rules.bgzip.output.vcfgz,
+        rules.bcftools_index.output.idx,
     output:
         temp("results/vcf/{sample}.filtered.vcf"),
     log:
@@ -91,7 +91,7 @@ rule make_list:
     input:
         expand("results/vcf/{sample}.filtered.vcf", sample=samples.index),
     output:
-        temp("results/vcf/vcf_list.txt"),
+        vcf_list=temp("results/vcf/vcf_list.txt"),
     conda:
         "../envs/calculations.yaml"
     log:
@@ -103,10 +103,10 @@ rule make_list:
 ## Merge VCF files
 rule merge_vcf:
     input:
-        list="results/vcf/vcf_list.txt",
+        list=rules.make_list.output.vcf_list,
         vcfs=expand("results/vcf/{sample}.filtered.vcf", sample=samples.index),
     output:
-        temp("results/vcf/merged.vcf"),
+        merged_vcfs=temp("results/vcf/merged.vcf"),
     conda:
         "../envs/calculations.yaml"
     log:
@@ -118,9 +118,9 @@ rule merge_vcf:
 ## Convert multisample VCF to tab-separated format
 rule convert2table:
     input:
-        "results/vcf/merged.vcf",
+        rules.merge_vcf.output.merged_vcfs,
     output:
-        temp("results/RD_table.raw.tsv"),
+        table=temp("results/RD_table.raw.tsv"),
     conda:
         "../envs/gatk4.yaml"
     log:
@@ -132,7 +132,7 @@ rule convert2table:
 ## Annotate putative RD regions
 rule annotate_rds:
     input:
-        "results/RD_table.raw.tsv",
+        rules.convert2table.output.table,
         config["files"]["rds"],
     output:
         "results/RD_putative.tsv",
