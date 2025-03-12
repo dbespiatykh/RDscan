@@ -3,7 +3,7 @@
 # pipeline for MTBC putative regions of difference discovery
 
 [![citation](https://img.shields.io/badge/DOI-10.1128%2FmSphere.00535--21-9f1d21)](https://doi.org/10.1128/mSphere.00535-21)
-[![Snakemake](https://img.shields.io/badge/snakemake-≥7.18.2-brightgreen.svg)](https://snakemake.github.io)
+[![Snakemake](https://img.shields.io/badge/snakemake-=7.18.2-brightgreen.svg)](https://snakemake.github.io)
 [![Tests](https://github.com/dbespiatykh/RDscan/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/dbespiatykh/RDscan/actions/workflows/main.yml)
 
 - [pipeline for MTBC putative regions of difference discovery](#pipeline-for-mtbc-putative-regions-of-difference-discovery)
