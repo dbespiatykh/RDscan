@@ -2,4 +2,4 @@ name: RDscan
 channels:
   - bioconda
 dependencies:
-  - snakemake
+  - snakemake==7.18.2
