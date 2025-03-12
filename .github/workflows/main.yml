@@ -5,15 +5,15 @@ on:
     branches:
       - master
   pull_request:
-    branches_ignore: []
+    branches-ignore: []
 
 jobs:
   formatting:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4.2.2
       - name: Formatting
-        uses: github/super-linter@v4
+        uses: github/super-linter@v7.3.0
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
@@ -23,9 +23,9 @@ jobs:
   linting:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4.2.2
       - name: Linting
-        uses: snakemake/snakemake-github-action@v1.23.0
+        uses: snakemake-github-action@v2.0.0
         with:
           directory: .test
           snakefile: workflow/Snakefile
@@ -38,13 +38,14 @@ jobs:
       - formatting
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4.2.2
         with:
           submodules: recursive
 
       - name: Test workflow
-        uses: snakemake/snakemake-github-action@v1.23.0
+        uses: snakemake/snakemake-github-action@v2.0.0
         with:
+          snakemake-version: "7.18.2"
           directory: .test
           snakefile: workflow/Snakefile
           args: "--use-conda --show-failed-logs --cores 2 --conda-cleanup-pkgs cache --all-temp"
